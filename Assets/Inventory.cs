@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     public GameObject w3s;
 
     // Start is called before the first frame update
-    int which = 2;
+    public int which = 2;
     int prev = 2;
     void Start()
     {
