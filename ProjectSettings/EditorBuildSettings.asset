@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/0 Title.unity
+    guid: c68a1bb31771f5040bb7bbbef3caf1d6
+  - enabled: 1
+    path: Assets/Scenes/1 LearnTheControls.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/2 GetTheWeapon.unity
+    guid: 299e2392581a5bd4e84645fd9e7f259a
+  - enabled: 1
+    path: Assets/Scenes/3 SeeTheRobot.unity
+    guid: 2df5916f59174ab44bdecc77874f6118
+  - enabled: 1
+    path: Assets/Scenes/4 HaveSomeFun.unity
+    guid: 88faeeb6c7a5c4244bc9b3cb621952be
+  - enabled: 1
+    path: Assets/Scenes/5 DoSomeParkour.unity
+    guid: cce7edb2e38eb084db814bb56207d7c1
+  - enabled: 1
+    path: Assets/Scenes/6 RaidTheBase.unity
+    guid: ded1091324da9f448b36068efe555e51
+  - enabled: 1
+    path: Assets/Scenes/7 RelaxABit.unity
+    guid: 431d12f3a0308f84e9caa36a7f7b6f2f
+  - enabled: 1
+    path: Assets/Scenes/8 SpinAndShoot.unity
+    guid: 7b38b32d732ce9b4abd981bd5df77118
+  - enabled: 1
+    path: Assets/Scenes/9 WatchAWar.unity
+    guid: 1f3a5b3c74e1d6745bfd98ec8aab3765
+  - enabled: 1
+    path: Assets/Scenes/10 FreezeInWinter.unity
+    guid: d4fa4269db79e6744bd05296ac3c6cc3
+  - enabled: 1
+    path: Assets/Scenes/11 ParkourInWinter.unity
+    guid: 9234e6dddda5f3241b28939cd91dcf5a
+  - enabled: 1
+    path: Assets/Scenes/12 FlyAndCry.unity
+    guid: 7ab40ff0a1045e44ebae470504a32947
+  - enabled: 1
+    path: Assets/Scenes/13 TheBeforeLastWinterLevel.unity
+    guid: 4d4aabf6feca91946a2cdd8334a6e5ed
+  - enabled: 1
+    path: Assets/Scenes/14 TheLastWinterLevel.unity
+    guid: 7e53cd0f44ed8e044acd9a29846329f4
+  - enabled: 1
+    path: Assets/Scenes/15 HealthFruitForest.unity
+    guid: 508edc1a98ba4b547b34fc7c9ac369db
+  - enabled: 1
+    path: Assets/Scenes/16 WindyForest.unity
+    guid: 2ac229fb1faa37748a6648f050123c78
+  - enabled: 1
+    path: Assets/Scenes/17 OpenFire.unity
+    guid: 349ce3cf4dc227040b76173370d68d98
+  - enabled: 1
+    path: Assets/Scenes/18 ActOnAC-T.unity
+    guid: 36a5a18d688be2f439b214d31db18d21
+  - enabled: 1
+    path: Assets/Scenes/51 AlmostThere.unity
+    guid: f8cc7ec3d8cb41549a926a62d09ce0d0
+  - enabled: 1
+    path: Assets/Scenes/52 FightTheBoss.unity
+    guid: 0de7891d733e2b649919eba333b37cc1
+  - enabled: 1
+    path: Assets/Scenes/53 ContinueFightingTheBoss.unity
+    guid: e86efb94efd1bb24f98d6d39dbd032ef
+  - enabled: 1
+    path: Assets/Scenes/W.I.P/Temporary End Screen.unity
+    guid: 669d7f0ea12815243ad01879245cd9ab
+  - enabled: 1
+    path: Assets/Scenes/Endless.unity
+    guid: 3513c764ab6f282439178ce3841a9be0
+  m_configObjects: {}
