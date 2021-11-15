@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if(alive && (collision.relativeVelocity.magnitude / 10) > 1f)
+        if(alive && (collision.relativeVelocity.magnitude / 10) > 10f)
         {
  health -= collision.relativeVelocity.magnitude / 10;
             if(collision.gameObject.tag == "fire")
