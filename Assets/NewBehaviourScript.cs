@@ -186,6 +186,24 @@ public class NewBehaviourScript : MonoBehaviour
             Destroy(target.gameObject);
             PlayerPrefs.Save();
         }
+        if (target.gameObject.tag == "goldbig")
+        {
+
+
+            sfx.Play(sfx.gold);
+            gold += 10;
+            if (endless)
+            {
+                PlayerPrefs.SetInt("egold", gold);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                PlayerPrefs.SetInt("gold", gold);
+            }
+            Destroy(target.gameObject);
+            PlayerPrefs.Save();
+        }
     }
     public void Jump()
     {

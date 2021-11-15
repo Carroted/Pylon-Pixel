@@ -69,6 +69,9 @@ EditorBuildSettings:
     path: Assets/Scenes/20 EscapeTheRegion.unity
     guid: 91772a3d8cd3dd64899141d3b6467958
   - enabled: 1
+    path: Assets/Scenes/21 NinjaAtNight.unity
+    guid: d929245d8b2bef143bd361c52ccdbfd4
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1
