@@ -1,0 +1,159 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+
+public class Terminal : MonoBehaviour
+{
+    public TMP_InputField inputField;
+    public TMP_Text console;
+    public bool loggedIn = false;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+    public void Enter()
+    {
+        if (loggedIn)
+        {
+            Submit();
+        }
+        else
+        {
+            Password();
+        }
+    }
+    public void Submit()
+    {
+        string cmd = inputField.text;
+        inputField.text = "";
+        console.text += "<color=#00FF06>$<color=#ffffff> " + cmd + "\n";
+        if (cmd == "")
+        {
+            return;
+        }
+        if (cmd == "help")
+        {
+            console.text += "help\n";
+            console.text += "clear\n";
+            console.text += "exit\n";
+            console.text += "login\n";
+            console.text += "logout\n";
+            console.text += "whoami\n";
+            console.text += "area unlock (area)\n";
+            console.text += "area unlock all\n";
+            console.text += "area lock (area)\n";
+            console.text += "area lock all\n";
+            console.text += "area erase (area) (2 factor authentication code)\n";
+            console.text += "area create (area) (JSON contents) (2 factor authentication code)\n";
+        }
+        else if (cmd == "clear")
+        {
+            console.text = "";
+        }
+        else if (cmd == "exit")
+        {
+            SceneManager.LoadScene(0);
+        }
+        else if (cmd == "login")
+        {
+            console.text += "You are already logged in.\n";
+        }
+        else if (cmd == "logout")
+        {
+            loggedIn = false;
+            console.text += "Logged out\n";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else if (cmd == "whoami")
+        {
+            console.text += "Michael\n";
+        }
+        else if (cmd == "area unlock all")
+        {
+            for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 2; i++)
+            {
+                if (i != 0)
+                {
+                    PlayerPrefs.SetInt("level" + i, 1);
+                    console.text += "Unlocked area " + i + ". If this area doesn't exist, it will be unlocked immediately upon creation.\n";
+                }
+            }
+        }
+        else if (cmd.StartsWith("area unlock "))
+        {
+            string area = cmd.Substring(12);
+            int areaNum = int.Parse(area);
+            PlayerPrefs.SetInt("level" + areaNum, 1);
+            console.text += "Unlocked area " + area + ". If this area doesn't exist, it will be unlocked immediately upon creation.\n";
+        }
+        else if (cmd.StartsWith("area lock all"))
+        {
+            for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 2; i++)
+            {
+                if (i != 0)
+                {
+                    PlayerPrefs.SetInt("level" + i, 0);
+                    console.text += "Locked area " + i + ". If this area doesn't exist, it will be locked immediately upon creation.\n";
+                }
+            }
+        }
+        else if (cmd.StartsWith("area lock "))
+        {
+            string area = cmd.Substring(10);
+            int areaNum = int.Parse(area);
+            PlayerPrefs.SetInt("level" + areaNum, 0);
+            console.text += "Locked area " + area + ". If this area doesn't exist, it will be locked immediately upon creation.\n";
+        }
+        else if (cmd.StartsWith("area erase "))
+        {
+            console.text += "<color=#ff1010>Invalid 2 factor authentication code.\n<color=#ffffff>";
+        }
+        else if (cmd.StartsWith("area create "))
+        {
+            console.text += "<color=#ff1010>Invalid 2 factor authentication code.\n<color=#ffffff>";
+        }
+        else
+        {
+            console.text += "<color=#ff1010>Unknown command<color=#ffffff>\n";
+        }
+    }
+    public void Exit()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Password()
+    {
+        string pass = inputField.text;
+        inputField.text = "";
+        if (pass == "")
+        {
+            console.text += "\n<color=#ff1010>Incorrect";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        // Everything in the terminal besides the buttons and the password is canonical. The commands are all canonical, the text, but not the password, nor the scrollbar, the exit button, the submit button, and input field.
+        else if (pass == "I understand that I am ruining my fun by cheating, and choose to do it anyway.")
+        {
+            console.text += "******************************************************************************\n<color=#10ff10>Logged in successfully<color=#ffffff>";
+            console.text += "\n";
+            loggedIn = true;
+        }
+        else
+        {
+            console.text += pass + "\n<color=#ff1010>Incorrect";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Enter();
+            inputField.Select();
+            inputField.ActivateInputField();
+        }
+    }
+}
