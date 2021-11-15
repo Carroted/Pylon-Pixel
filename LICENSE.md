@@ -27,7 +27,7 @@ By agreeing to the license, you agree to the following points, and are legally b
     precise, just don't use more than 50% of the scripts we (Carroted)
     made for this game in a single project other than personal versions
     of the game or a download of the project to modify scripts and
-    test/build.
+    test/build. 
     
 3. We may modify this license at any time. If we do, previous versions
     of the game are unaffected by the license change, only future ones.
