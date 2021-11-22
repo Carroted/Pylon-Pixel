@@ -3284,6 +3284,7 @@ GameObject:
   - component: {fileID: 7285032579306067179}
   - component: {fileID: 7285032579306067183}
   - component: {fileID: 8003408895410762992}
+  - component: {fileID: 3550228465911878808}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -3410,6 +3411,7 @@ MonoBehaviour:
   w2s: {fileID: 3045153484584893892}
   w3b: {fileID: 8847520525376649590}
   w3s: {fileID: 9118072350916835951}
+  which: 2
 --- !u!114 &8003408895410762992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3425,6 +3427,19 @@ MonoBehaviour:
   fill: {fileID: 7285032577991908549}
   slider: {fileID: 7285032579282381841}
   circle: {fileID: 7285032578013892513}
+--- !u!114 &3550228465911878808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285032579306067178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f28637f690c13a44897e43dad097a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobileControls: {fileID: 0}
 --- !u!1 &7285032579346745479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,6 +4737,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9001778549765754501, guid: 44132599c1a17304ab2b229edea4c65c, type: 3}
+      propertyPath: mobileControlsFindAndStore
+      value: 
+      objectReference: {fileID: 3550228465911878808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44132599c1a17304ab2b229edea4c65c, type: 3}
 --- !u!1 &8434563121031239167 stripped

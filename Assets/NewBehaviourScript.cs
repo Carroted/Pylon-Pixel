@@ -60,6 +60,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         if (PlayerPrefs.HasKey("color"))
         {
             Color colory;
@@ -68,41 +69,51 @@ public class NewBehaviourScript : MonoBehaviour
         }
         if (PlayerPrefs.HasKey("strip"))
         {
+            print(PlayerPrefs.GetString("strip"));
             if (PlayerPrefs.GetString("strip") == "regular")
             {
                 strip.sprite = regularstrip;
+                print("strip is regular");
             }
             else if (PlayerPrefs.GetString("strip") == "none")
             {
                 strip.sprite = nothing;
+                print("strip is none");
             }
             else
             {
                 strip.sprite = antistrip;
+                print("strip is anti");
             }
         }
         else
         {
+            print("no strip saved using regular");
             strip.sprite = regularstrip;
             PlayerPrefs.SetString("strip", "regular");
         }
         if (PlayerPrefs.HasKey("base"))
         {
+            print(PlayerPrefs.GetString("base"));
             if (PlayerPrefs.GetString("base") == "regular")
             {
+                print("base is regular");
                 basee.sprite = regularbase;
             }
             else if (PlayerPrefs.GetString("base") == "none")
             {
+                print("base is none");
                 basee.sprite = nothing;
             }
             else
             {
+                print("base is anti");
                 basee.sprite = antibase;
             }
         }
         else
         {
+            print("no base saved using regular");
             basee.sprite = regularbase;
             PlayerPrefs.SetString("base", "regular");
         }

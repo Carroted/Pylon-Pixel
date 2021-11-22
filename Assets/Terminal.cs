@@ -9,6 +9,7 @@ public class Terminal : MonoBehaviour
     public TMP_InputField inputField;
     public TMP_Text console;
     public bool loggedIn = false;
+    public GameObject cover;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,8 @@ public class Terminal : MonoBehaviour
             console.text += "area lock all\n";
             console.text += "area erase (area) (2 factor authentication code)\n";
             console.text += "area create (area) (JSON contents) (2 factor authentication code)\n";
+            console.text += "kill (entity)\n";
+            console.text += "kill all\n";
         }
         else if (cmd == "clear")
         {
@@ -115,6 +118,10 @@ public class Terminal : MonoBehaviour
         {
             console.text += "<color=#ff1010>Invalid 2 factor authentication code.\n<color=#ffffff>";
         }
+        else if (cmd.StartsWith("kill "))
+        {
+            console.text += "<color=#ff1010>Invalid entity.\n<color=#ffffff>";
+        }
         else
         {
             console.text += "<color=#ff1010>Unknown command<color=#ffffff>\n";
@@ -154,6 +161,12 @@ public class Terminal : MonoBehaviour
             Enter();
             inputField.Select();
             inputField.ActivateInputField();
+        }
+        if (inputField.text.Trim() == "kill all")
+        {
+            // Attempted genocide is a severe violation of CPVAMCA policy and results in a permanent blacklist.
+            cover.SetActive(true);
+            SceneManager.LoadScene("CPVAMCA");
         }
     }
 }

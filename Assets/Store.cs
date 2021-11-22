@@ -96,36 +96,45 @@ public class Store : MonoBehaviour
     {
         PlayerPrefs.SetString("color", ColorUtility.ToHtmlStringRGB(cone.color));
         nbs.cone.color = cone.color;
-        if (strip.sprite == antistrip && strip.enabled)
+        if ((strip.sprite == antistrip || strip.sprite == nbs.antistrip) && strip.enabled == true)
         {
+            print("strip is anti, using anti lmao");
             PlayerPrefs.SetString("strip", "anti");
             nbs.strip.sprite = strip.sprite;
         }
-        else if (strip.enabled)
+        else if (!strip.enabled || strip.sprite == nbs.nothing)
         {
-            PlayerPrefs.SetString("strip", "regular");
-            nbs.strip.sprite = strip.sprite;
-        }
-        else
-        {
+            print("strip is disabled, using none lmao");
             PlayerPrefs.SetString("strip", "none");
             nbs.strip.sprite = nothing;
         }
-        if (basee.sprite == antibase && basee.enabled)
+        else if (strip.enabled == true)
         {
+            print("strip is enabled, using regular lmao");
+            PlayerPrefs.SetString("strip", "regular");
+            nbs.strip.sprite = strip.sprite;
+
+        }
+        if ((basee.sprite == antibase || basee.sprite == nbs.antibase) && basee.enabled == true)
+        {
+            print("base is anti, using anti lmao");
             PlayerPrefs.SetString("base", "anti");
             nbs.basee.sprite = basee.sprite;
         }
-        else if (basee.enabled)
+        else if ((!basee.enabled) || basee.sprite == nbs.nothing)
         {
-            PlayerPrefs.SetString("base", "regular");
-            nbs.basee.sprite = basee.sprite;
-        }
-        else
-        {
+            print("base is disabled, using none");
             PlayerPrefs.SetString("base", "none");
             nbs.basee.sprite = nothing;
         }
+        else if (basee.enabled)
+        {
+            print("base is enabled, using regular");
+            PlayerPrefs.SetString("base", "regular");
+            nbs.basee.sprite = basee.sprite;
+        }
+        PlayerPrefs.Save();
+        gameObject.SetActive(false);
     }
     public void Reset()
     {
@@ -151,6 +160,12 @@ public class Store : MonoBehaviour
         {
             strip.sprite = antistrip;
         }
+    }
+    public void RegularBase()
+    {
+
+        basee.sprite = regularbase;
+
     }
     public void AntiBase()
     {

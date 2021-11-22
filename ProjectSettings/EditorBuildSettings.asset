@@ -78,6 +78,12 @@ EditorBuildSettings:
     path: Assets/Scenes/23 AlmostNoon.unity
     guid: d63898ec7c068c14b9f224abfcd56251
   - enabled: 1
+    path: Assets/Scenes/24 GoForASwim.unity
+    guid: a1d27bf63546bde4d867fa5d16a1d418
+  - enabled: 1
+    path: Assets/Scenes/25 It'sDarkInHere.unity
+    guid: 99392f666bf51e74bbda10251bb34761
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1
@@ -95,4 +101,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Terminal.unity
     guid: 99e1656a1fc34d14f8b121c37beb6db4
+  - enabled: 1
+    path: Assets/Scenes/CPVAMCA.unity
+    guid: 85f63852739f1fc4fa5844e03e5728be
   m_configObjects: {}
