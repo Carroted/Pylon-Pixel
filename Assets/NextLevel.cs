@@ -8,6 +8,7 @@ public class NextLevel : MonoBehaviour
     public static bool isMethod = false;
     public NewBehaviourScript nbs;
     public bool insane = false;
+    public int move = 1;
     private static bool erase;
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,11 @@ public class NextLevel : MonoBehaviour
         {
             if (!insane)
             {
-                SaveAndLeave(SceneManager.GetActiveScene().buildIndex + 1);
+                SaveAndLeave(SceneManager.GetActiveScene().buildIndex + move);
             }
             else
             {
-                SaveAndLeave(SceneManager.GetActiveScene().buildIndex + 2);
+                SaveAndLeave(SceneManager.GetActiveScene().buildIndex + move + 1);
             }
         }
     }

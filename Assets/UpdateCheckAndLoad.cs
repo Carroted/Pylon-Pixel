@@ -90,8 +90,17 @@ public class UpdateInfo
 
     public UpdateInfo(string line)
     {
-        version = line.Split(';')[0].Trim();
-        description = line.Split(';')[1].Trim();
-        downloadURL = "https://drive.google.com/u/0/uc?export=download&confirm=gxpY&id=" + line.Split(';')[2].Trim();
+        if (line != "")
+        {
+            version = line.Split(';')[0].Trim();
+            description = line.Split(';')[1].Trim();
+            downloadURL = "https://drive.google.com/u/0/uc?export=download&confirm=gxpY&id=" + line.Split(';')[2].Trim();
+        }
+        else
+        {
+            version = "0.0.0";
+            description = "No description available";
+            downloadURL = "";
+        }
     }
 }
