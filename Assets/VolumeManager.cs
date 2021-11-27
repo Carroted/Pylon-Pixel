@@ -10,6 +10,14 @@ public class VolumeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("SFXVolume"))
+        {
+            PlayerPrefs.SetFloat("SFXVolume", 5);
+        }
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 5);
+        }
         if (music != null)
         {
             music.volume = PlayerPrefs.GetFloat("MusicVolume");

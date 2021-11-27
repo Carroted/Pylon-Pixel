@@ -17,25 +17,39 @@ public class MobileControlsToggle : MonoBehaviour
     }
     void Start()
     {
-        mobileControls = mobileControlsFindAndStore.mobileControls;
+        if (mobileControlsFindAndStore != null)
+        {
+            mobileControls = mobileControlsFindAndStore.mobileControls;
+        }
     }
     public void OnValueChanged()
     {
         if (mobileControls == null)
         {
-            mobileControls = mobileControlsFindAndStore.mobileControls;
+            if (mobileControlsFindAndStore != null)
+            {
+                mobileControls = mobileControlsFindAndStore.mobileControls;
+            }
+
         }
+
         if (toggle.isOn)
         {
             Debug.Log("Mobile Controls On");
             PlayerPrefs.SetInt("MobileControls", 1);
-            mobileControls.SetActive(true);
+            if (mobileControls != null)
+            {
+                mobileControls.SetActive(true);
+            }
         }
         else
         {
             Debug.Log("Mobile Controls Off");
             PlayerPrefs.SetInt("MobileControls", 0);
-            mobileControls.SetActive(false);
+            if (mobileControls != null)
+            {
+                mobileControls.SetActive(false);
+            }
         }
         PlayerPrefs.Save();
     }

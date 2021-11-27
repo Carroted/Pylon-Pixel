@@ -265,14 +265,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: CPVAMCA
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 827f840a848095941bb3ecaebe302bb1, type: 2}
-  m_sharedMaterial: {fileID: -8433931695724337813, guid: 827f840a848095941bb3ecaebe302bb1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26002dc64893d4241a5e9322c6d35601, type: 2}
+  m_sharedMaterial: {fileID: -3183605176755658553, guid: 26002dc64893d4241a5e9322c6d35601, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3613232895
+    rgba: 4284321535
   m_fontColor: {r: 1, g: 0.55660653, b: 0.36320752, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2214592511
+    rgba: 2499805183
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.5803922}
   m_enableVertexGradient: 0
   m_colorMode: 3

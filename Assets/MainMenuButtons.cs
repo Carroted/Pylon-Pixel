@@ -33,7 +33,7 @@ public class MainMenuButtons : MonoBehaviour
     public void Endless()
     {
         // Load the last level (the endless level)
-        LoadLevel(SceneManager.sceneCountInBuildSettings - 1);
+        LoadLevel(SceneManager.sceneCountInBuildSettings - 3);
     }
     public void LoadLevel(int index)
     {

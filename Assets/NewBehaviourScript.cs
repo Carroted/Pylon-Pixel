@@ -8,6 +8,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    float deadZone = 0.3f;
     public int debugAddGold = 0;
     public Sprite pyyy;
     public TMPro.TMP_Text goldcount;
@@ -60,7 +61,14 @@ public class NewBehaviourScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        if (PlayerPrefs.HasKey("DeadZoneVolume"))
+        {
+            deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("DeadZoneVolume", deadZone * 20);
+        }
         if (PlayerPrefs.HasKey("color"))
         {
             Color colory;
@@ -273,6 +281,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
     }
+
     public void Fire2()
     {
         if (hp.alive)
@@ -390,6 +399,9 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void Update()
     {
+
+        deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+
         if (Input.GetButtonDown("Dialog"))
         {
             dialogClose = true;
@@ -467,7 +479,7 @@ public class NewBehaviourScript : MonoBehaviour
             rb.freezeRotation = true;
             if (hp.alive)
             {
-                if (Input.GetAxisRaw("Horizontal") >= 0.6f || j.Horizontal >= 0.3f)
+                if (Input.GetAxisRaw("Horizontal") >= 0.6f || j.Horizontal >= deadZone)
                 {
 
 
@@ -476,7 +488,7 @@ public class NewBehaviourScript : MonoBehaviour
 
                 }
 
-                if (Input.GetAxisRaw("Horizontal") <= -0.6f || j.Horizontal <= -0.3f)
+                if (Input.GetAxisRaw("Horizontal") <= -0.6f || j.Horizontal <= -deadZone)
                 {
 
 
@@ -495,7 +507,7 @@ public class NewBehaviourScript : MonoBehaviour
                     Time.timeScale = 1f;
                 }
 
-                if (Input.GetAxisRaw("Vertical") <= -0.6f || j.Vertical <= -0.3f)
+                if (Input.GetAxisRaw("Vertical") <= -0.6f || j.Vertical <= -deadZone)
                 {
 
                     rb.AddForce(new Vector2(0f, -19f));

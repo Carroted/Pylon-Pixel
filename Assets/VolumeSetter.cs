@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class VolumeSetter : MonoBehaviour
 {
+    public float middle = 5f;
     public Slider slider;
     public string key;
 
@@ -17,7 +18,7 @@ public class VolumeSetter : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetFloat(key + "Volume", 5f);
+            PlayerPrefs.SetFloat(key + "Volume", middle);
         }
 
     }
