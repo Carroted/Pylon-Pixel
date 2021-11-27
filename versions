@@ -1,3 +1,4 @@
 0.4.9;Adds version screen and fixes bugs in menu.;1LMA6D9R1Oa7h2MhYeov01n6Sg5y1GxDV
 0.4.10;Adds joystick dead zone slider and fixes a bug with objects appearing on top of objects they shouldn't in settings;1HdpwcSIDQMgvnKok22rBOpVlRcqtXNyG
 0.4.11;Switches download host so you can update anytime and fixes bugs;1ilBT86NnbWFpT6Tq-Bi26sfkaktJQbXY
+0.4.12;Fixes bugs and adds a level, also makes game load faster;15z9VN9wDcgustfc7X7wFgvbKrq_Xyi9V
