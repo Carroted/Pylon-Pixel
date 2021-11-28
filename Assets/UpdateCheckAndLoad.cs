@@ -12,10 +12,12 @@ public class UpdateCheckAndLoad : MonoBehaviour
     public TMP_Text descriptionText;
     private string updateURL = "";
 
+    public GameObject updateButton;
+
     // Start is called before the first frame update
     void Start()
     {
-        //if (Application.platform != RuntimePlatform.Android) return;
+        if (Application.platform != RuntimePlatform.Android) return;
 
         string url = "https://raw.githubusercontent.com/Carroted/Pylon-Pixel/main/versions";
         UnityWebRequest webjson = UnityWebRequest.Get(url);
@@ -70,6 +72,7 @@ public class UpdateCheckAndLoad : MonoBehaviour
             else
             {
                 Debug.Log("New version available.");
+                updateButton.SetActive(true);
             }
         }
 

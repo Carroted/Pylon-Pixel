@@ -87,6 +87,9 @@ EditorBuildSettings:
     path: Assets/Scenes/26 GetToTheSurface.unity
     guid: ae8202df2bd1ab0479fd1488663d74d1
   - enabled: 1
+    path: Assets/Scenes/27 GoBuildABomb.unity
+    guid: 0e9a7d567a6082c4b90c2cf6ac3d53c7
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1

@@ -6,6 +6,7 @@ public class Pauser : MonoBehaviour
 {
     public bool paused = false;
     public GameObject pausemenu;
+    public float timeScale = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Pauser : MonoBehaviour
     public void One()
     {
         paused = false;
-        Time.timeScale = 1f;
+        Time.timeScale = timeScale;
     }
     public void Menu()
     {
@@ -34,7 +35,7 @@ public class Pauser : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1f;
+            Time.timeScale = timeScale;
         }
 
         if (Input.GetButtonDown("Cancel"))

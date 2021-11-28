@@ -34,6 +34,10 @@ public class Inventory : MonoBehaviour
     {
         nbs = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
     }
+    public void Lose3()
+    {
+        has3 = false;
+    }
     // Empty
     public void Select1()
     {

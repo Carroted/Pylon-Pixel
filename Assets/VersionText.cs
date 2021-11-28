@@ -6,6 +6,7 @@ using TMPro;
 public class VersionText : MonoBehaviour
 {
     private TMP_Text text;
+    public string start = "Version";
     // Start is called before the first frame update
     void Start()
     {
@@ -13,15 +14,15 @@ public class VersionText : MonoBehaviour
     }
     private void OnValidate()
     {
-        if(text == null)
+        if (text == null)
         {
             text = GetComponent<TMP_Text>();
         }
-        text.text = "Version " + Application.version;
+        text.text = start + " " + Application.version;
     }
     // Update is called once per frame
     void Update()
     {
-        text.text = "Version " + Application.version;
+        text.text = start + " " + Application.version;
     }
 }
