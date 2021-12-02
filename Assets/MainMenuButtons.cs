@@ -51,6 +51,12 @@ public class MainMenuButtons : MonoBehaviour
         // Begin loading the level
         SceneManager.LoadScene(index);
     }
+    public void StatsAndAchievementsy()
+    {
+
+        // Load the stats and achievements scene
+        SceneManager.LoadScene("Stats");
+    }
     public void EraseAll()
     {
         // WARNING: DO NOT CALL THIS UNLESS YOU WISH TO ERASE ALL PROGRESS

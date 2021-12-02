@@ -206,6 +206,9 @@ MonoBehaviour:
   fill: {fileID: 1792261861442626003}
   healthbar: {fileID: 1792261862226115487}
   alive: 1
+  invulnerable: 0
+  enemy: 1
+  addition: 
 --- !u!60 &1792261860217298972
 PolygonCollider2D:
   m_ObjectHideFlags: 0

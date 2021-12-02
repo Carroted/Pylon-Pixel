@@ -975,7 +975,7 @@ MonoBehaviour:
   projectprefab3: {fileID: 7323048181886415339, guid: 2ec8b958b1ca4544282a57390aa38673, type: 3}
   hp: {fileID: 7210414747949652496}
   sfx: {fileID: 0}
-  weapon: 1
+  weapon: 0
   w1: {fileID: 7210414748901926441}
   w2: {fileID: 5484569546014742331}
   w3: {fileID: 1497095802039887020}
@@ -1075,6 +1075,9 @@ MonoBehaviour:
   fill: {fileID: 0}
   healthbar: {fileID: 0}
   alive: 1
+  invulnerable: 0
+  enemy: 0
+  addition: 
 --- !u!1 &7210414748107421933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,7 +1153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7210414748901926440
 Transform:
   m_ObjectHideFlags: 0

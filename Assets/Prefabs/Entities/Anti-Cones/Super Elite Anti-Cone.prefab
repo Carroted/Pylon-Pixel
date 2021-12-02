@@ -781,6 +781,9 @@ MonoBehaviour:
   fill: {fileID: 4170852709773579065}
   healthbar: {fileID: 4170852710802620983}
   alive: 1
+  invulnerable: 0
+  enemy: 1
+  addition: elite
 --- !u!50 &4170852711607427611
 Rigidbody2D:
   serializedVersion: 4
@@ -861,6 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1b7e4decf8f7b4abb527507c651907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  jumprareness: 100
   move: 0
   hp: {fileID: 4170852711607427610}
   sfx: {fileID: 0}

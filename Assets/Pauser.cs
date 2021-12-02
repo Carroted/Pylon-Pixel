@@ -26,6 +26,10 @@ public class Pauser : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+    public void StatsAndAchievements()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Stats");
+    }
     // Update is called once per frame
     void Update()
     {
