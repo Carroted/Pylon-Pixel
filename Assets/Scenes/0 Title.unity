@@ -343,7 +343,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.05
+  m_fontSize: 36.05
   m_fontSizeBase: 61.36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.95
+  m_fontSize: 31.6
   m_fontSizeBase: 61.36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2472,12 +2472,12 @@ GameObject:
   - component: {fileID: 254552251}
   - component: {fileID: 254552250}
   m_Layer: 5
-  m_Name: Go For A Swim (1)
+  m_Name: Uh Oh Uh Oh Looks Like Uh Oh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &254552249
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mmb: {fileID: 78098993}
-  level: 24
+  level: 29
   lockk: {fileID: 1679589533}
   button: {fileID: 254552251}
   neverLocked: 0
@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad8a9b0303d12054088807675b222a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0daffe604963aba48709fcd165b614c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8817,7 +8817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.5.2
+  m_text: Version 0.5.3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -13362,7 +13362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pylon Pixel 0.5.2
+  m_text: Pylon Pixel 0.5.3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -14469,7 +14469,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1918673730}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.35322517
+  m_Size: 0.3532252
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17573,7 +17573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go For A Swim
+  m_text: UH OH UH OH LOOKS LIKE UH OH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -17610,8 +17610,8 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_characterSpacing: -12
+  m_wordSpacing: -12.23
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -20223,7 +20223,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 245627142}
   m_Direction: 0
   m_Value: 0.5000002
-  m_Size: 0.71428573
+  m_Size: 0.7142858
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22402,7 +22402,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962676761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
