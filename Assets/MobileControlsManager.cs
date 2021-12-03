@@ -18,15 +18,15 @@ public class MobileControlsManager : MonoBehaviour
         else
         {
             // If we're not on a mobile device, or we're in the editor, then disable the mobile controls. This can be toggled in settings later.
-            if ((Application.isEditor || !Application.isMobilePlatform))
-            {
-                PlayerPrefs.SetInt("MobileControls", 0);
-                gameObject.SetActive(false);
-            }
-            else
-            {
+            //if ((Application.isEditor || !Application.isMobilePlatform))
+            //{
+            //    PlayerPrefs.SetInt("MobileControls", 0);
+            //    gameObject.SetActive(false);
+            //}
+            //else
+            //{
                 PlayerPrefs.SetInt("MobileControls", 1);
-            }
+            //}
         }
     }
 
