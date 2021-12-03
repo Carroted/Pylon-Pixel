@@ -16,9 +16,17 @@ public class NextLevel1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (PlayerPrefs.HasKey("deaths"))
+            {
+                PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths") + 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("deaths", 1);
+            }
             if (health0)
             {
-                collision.gameObject.GetComponent<Health>().health = 0;
+                collision.gameObject.GetComponent<Health>().health = 1;
             }
             StartCoroutine(Stuff(SceneManager.GetActiveScene().buildIndex));
         }

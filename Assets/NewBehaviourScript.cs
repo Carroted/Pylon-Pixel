@@ -6,7 +6,7 @@ using System.Diagnostics;
 using UnityStandardAssets.CrossPlatformInput;
 //using XInputDotNetPure;
 
-public class NewBehaviourScript : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by this behaviour.
 {
     float deadZone = 0.3f;
     public int debugAddGold = 0;
@@ -104,7 +104,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             print(PlayerPrefs.GetString("base"));
             if (PlayerPrefs.GetString("base") == "regular")
-            {
+            {   // Oh, you know Crystalius? He's... well.. he's a little gullible.
                 print("base is regular");
                 basee.sprite = regularbase;
             }
@@ -120,7 +120,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
         else
-        {
+        { // Yeah, I know. I mean, he's cool though. That Will guy on the other hand.. something's... off about him.
             print("no base saved using regular");
             basee.sprite = regularbase;
             PlayerPrefs.SetString("base", "regular");
@@ -140,7 +140,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 gold = PlayerPrefs.GetInt("gold") + debugAddGold;
             }
-        }
+        } // What do you mean by that?
         else
         {
             if (!PlayerPrefs.HasKey("egold"))
@@ -151,7 +151,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 gold = PlayerPrefs.GetInt("egold") + debugAddGold;
             }
-        }
+        }// Well, I don't really know. I guess not.
 
         //whatIsGround = LayerMask.GetMask("jumpable", "otherJump");
         rb = GetComponent<Rigidbody2D>();
@@ -519,8 +519,17 @@ public class NewBehaviourScript : MonoBehaviour
         {
             // hp.alive = true;
             NextLevel.Static(true);
-            hp.alive = true;
-            hp.health = hp.max;
+            if (PlayerPrefs.HasKey("deaths"))
+            {
+                PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths") + 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("deaths", 1);
+            }
+            hp.alive = false;
+            hp.health = 0;
+            this.enabled = false;
         }
     }
 }

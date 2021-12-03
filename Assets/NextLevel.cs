@@ -49,12 +49,11 @@ public class NextLevel : MonoBehaviour
     {
 
         circle.SetTrigger("EndLevel");
-        if (!erase)
-        {
-            PlayerPrefs.SetInt("level" + index, 1);
-            PlayerPrefs.SetInt("gold", nbs.gold);
-            PlayerPrefs.Save();
-        }
+
+        PlayerPrefs.SetInt("level" + index, 1);
+        PlayerPrefs.SetInt("gold", nbs.gold);
+        PlayerPrefs.Save();
+
 
 
         yield return new WaitForSeconds(1f);

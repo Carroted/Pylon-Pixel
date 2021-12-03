@@ -515,6 +515,9 @@ MonoBehaviour:
   fill: {fileID: 7160915995290812149}
   healthbar: {fileID: 7160915995612327931}
   alive: 1
+  invulnerable: 0
+  enemy: 1
+  addition: 
 --- !u!50 &7160915994807554007
 Rigidbody2D:
   serializedVersion: 4

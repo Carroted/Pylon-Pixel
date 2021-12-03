@@ -2623,6 +2623,7 @@ MonoBehaviour:
   circle: {fileID: 0}
   nbs: {fileID: 0}
   insane: 0
+  move: 1
 --- !u!61 &260089451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12125,6 +12126,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047140038359268477, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047140038359268477, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047140038359268477, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089314539386354584, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089314539386354584, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7285032577991908548, guid: 4866d6c3b4a398447936e5bf6b69e68f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
