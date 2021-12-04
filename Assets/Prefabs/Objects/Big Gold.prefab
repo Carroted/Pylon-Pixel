@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851890d7aea148c4bb3b9c54cffb2b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 21 GrabSomeExplosives_d016cf82-fb57-49e8-a195-2ee905e3a278
+  uniqueId: Big Gold_98ea63aa-fc83-4ddb-b942-190010527e0c
 --- !u!114 &6223675343848975951
 MonoBehaviour:
   m_ObjectHideFlags: 0

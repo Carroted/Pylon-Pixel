@@ -16,6 +16,7 @@ TagManager:
   - mobile
   - goldbig
   - bombtag
+  - goldhuge
   layers:
   - Default
   - TransparentFX
