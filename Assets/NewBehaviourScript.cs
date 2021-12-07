@@ -223,6 +223,24 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
             Destroy(target.gameObject);
             PlayerPrefs.Save();
         }
+        if (target.gameObject.tag == "goldhuge")
+        {
+
+
+            sfx.Play(sfx.gold);
+            gold += 100;
+            if (endless)
+            {
+                PlayerPrefs.SetInt("egold", gold);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                PlayerPrefs.SetInt("gold", gold);
+            }
+            Destroy(target.gameObject);
+            PlayerPrefs.Save();
+        }
     }
     public void Jump()
     {
