@@ -96,6 +96,9 @@ EditorBuildSettings:
     path: Assets/Scenes/29 Uh Oh Uh Oh Looks Like Uh Oh.unity
     guid: 7bf3c34754a4c4a41a07b8d1300d9f78
   - enabled: 1
+    path: Assets/Scenes/30 FallDown.unity
+    guid: 74222dfd5a64a7650ba04679dbc0186f
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1
