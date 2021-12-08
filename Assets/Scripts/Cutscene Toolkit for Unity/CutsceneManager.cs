@@ -20,6 +20,7 @@ public class CutsceneManager : MonoBehaviour
 
     public GameObject player;
     public NewBehaviourScript nbs;
+    public bool donbsstuff = true;
     // Mobile controls used to be disableable, this behaviour was removed due to issues it caused while players were holding controls when they were disabled, causing them to be stuck in the position they were in when reenabled. This is kept incase someone would want to fix it, which could be done by deselecting the mobile controls before diabling.
     //public GameObject mobileControls;
     //private bool mobileEnabled;
@@ -66,15 +67,20 @@ public class CutsceneManager : MonoBehaviour
             }
             follow.PingouaIdle = player;
         }
+        if(donbsstuff)
+        {
         if (nbs == null)
         {
             cam = Camera.main.gameObject;
             follow = cam.transform.parent.GetComponent<Follow>();
             player = follow.PingouaIdle;
+            
             nbs = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
         }
+        
+             nbs.enabled = !removePlayerControl;
+        }
 
-        nbs.enabled = !removePlayerControl;
         // Mobile controls used to be disabled, this behaviour was removed due to issues it caused while players were holding controls when it was disabled, causing it to be stuck in that position. when reenabled.
         /*
         if (mobileEnabled)

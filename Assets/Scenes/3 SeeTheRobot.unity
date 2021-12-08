@@ -352,7 +352,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -511,6 +511,7 @@ MonoBehaviour:
   circle: {fileID: 260089449}
   nbs: {fileID: 0}
   insane: 0
+  move: 1
 --- !u!61 &260089451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1443,6 +1444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5484569546014742331, guid: 2772dc46b05338944ab0232f3ef0fe88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7210414747949652497, guid: 2772dc46b05338944ab0232f3ef0fe88, type: 3}
       propertyPath: j
       value: 
@@ -1649,7 +1654,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &876098730
 PrefabInstance:

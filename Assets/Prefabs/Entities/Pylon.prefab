@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1832179372016324423
 Transform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   projectprefab3: {fileID: 7323048181886415339, guid: 2ec8b958b1ca4544282a57390aa38673, type: 3}
   hp: {fileID: 7210414747949652496}
   sfx: {fileID: 0}
-  weapon: 0
+  weapon: 2
   w1: {fileID: 7210414748901926441}
   w2: {fileID: 5484569546014742331}
   w3: {fileID: 1497095802039887020}

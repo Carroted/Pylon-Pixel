@@ -58,6 +58,10 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     private bool vibrate2 = false;
     public static bool dialogClose = false;
 
+public void Hurt(float damage)
+    {
+        hp.health -= (damage);
+    }
     // Use this for initialization
     void Start()
     {

@@ -1207,6 +1207,7 @@ MonoBehaviour:
   circle: {fileID: 50712643}
   nbs: {fileID: 0}
   insane: 0
+  move: 1
 --- !u!61 &260089451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9559,6 +9560,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5484569546014742331, guid: 2772dc46b05338944ab0232f3ef0fe88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7210414747949652496, guid: 2772dc46b05338944ab0232f3ef0fe88, type: 3}
       propertyPath: fill
       value: 
