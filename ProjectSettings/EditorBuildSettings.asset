@@ -102,8 +102,14 @@ EditorBuildSettings:
     path: Assets/Scenes/31 GetBackUp.unity
     guid: 2ae7e3919a16ef893abb033ee61e4e64
   - enabled: 1
-    path: Assets/Scenes/32 T-MINUS 10.unity
+    path: Assets/Scenes/32 LevelNameHere.unity
     guid: d20e2ae7e2546c54f89e2707696dcbe3
+  - enabled: 1
+    path: Assets/Scenes/33 SlowTheConeDown.unity
+    guid: 70d6e48aee957084eba8aed0b8bf6153
+  - enabled: 1
+    path: Assets/Scenes/34 E.unity
+    guid: 022abd2cd7fffc34f8f8861681937ca5
   - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
@@ -113,6 +119,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/52.5 ContinueFightingTheBoss.unity
     guid: e86efb94efd1bb24f98d6d39dbd032ef
+  - enabled: 1
+    path: Assets/Scenes/53 The End.unity
+    guid: ef85cf322beacbb868cc60a017cab808
+  - enabled: 1
+    path: Assets/Scenes/54 EndCutscene.unity
+    guid: a7eafd1afccfc4a99a9d1dafdb7fca66
   - enabled: 1
     path: Assets/Scenes/W.I.P/Temporary End Screen.unity
     guid: 669d7f0ea12815243ad01879245cd9ab

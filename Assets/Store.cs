@@ -51,6 +51,8 @@ public class Store : MonoBehaviour
             PlayerPrefs.SetInt("antibase", 0);
         }
         doframes = true;
+        antisLocked.SetActive(!antis);
+        antibLocked.SetActive(!antib);
     }
     public void ConeColor(Color color)
     {
