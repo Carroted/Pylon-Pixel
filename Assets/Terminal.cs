@@ -74,6 +74,10 @@ public class Terminal : MonoBehaviour
         {
             console.text += "Michael\n";
         }
+        else if (cmd == "whoa" + "r" + "eyou")
+        {
+            console.text += ":)\n";
+        }
         else if (cmd == "area unlock all")
         {
             for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 2; i++)
@@ -81,16 +85,52 @@ public class Terminal : MonoBehaviour
                 if (i != 0)
                 {
                     PlayerPrefs.SetInt("level" + i, 1);
-                    console.text += "Unlocked area " + i + ". If this area doesn't exist, it will be unlocked immediately upon creation.\n";
+                    console.text += "Unlocked <color=#00FF06>area " + i + "<color=#ffffff>. If this area doesn't exist, it will be unlocked immediately upon creation.\n";
                 }
             }
         }
+        else if (cmd == "lynx 0")
+        {
+            PlayerPrefs.SetInt("lynxskin", 0);
+            console.text += "<color=#ff4f30>CPVAMCA command override:<color=#ffffff> <color=#00FF06>Skin \"Lynx skin\"<color=#ffffff> unequipped. This is not a real console command, although it appears to be.\n";
+        }
+        else if (cmd == "lynx 1")
+        {
+            PlayerPrefs.SetInt("lynxskin", 1);
+            console.text += "<color=#ff4f30>CPVAMCA command override:<color=#ffffff> <color=#00FF06>Skin \"Lynx skin\"<color=#ffffff> equipped. This is not a real console command, although it appears to be.\n";
+        }
+        /*
+        else if (cmd == "hats.santa 1")
+        {
+            PlayerPrefs.SetInt("xmasHat", 1);
+            console.text += "<color=#ff4f30>CPVAMCA command override:<color=#ffffff> <color=#00FF06>Hat \"Christmas Hat\"<color=#ffffff> equipped. This is not a real console command, although it appears to be.\n";
+        }
+        else if (cmd == "hats.santa 0")
+        {
+            PlayerPrefs.SetInt("xmasHat", 0);
+            console.text += "<color=#ff4f30>CPVAMCA command override:<color=#ffffff> <color=#00FF06>Hat \"Christmas Hat\"<color=#ffffff> unequipped. This is not a real console command, although it appears to be.\n";
+        }*/
         else if (cmd.StartsWith("area unlock "))
         {
             string area = cmd.Substring(12);
             int areaNum = int.Parse(area);
             PlayerPrefs.SetInt("level" + areaNum, 1);
-            console.text += "Unlocked area " + area + ". If this area doesn't exist, it will be unlocked immediately upon creation.\n";
+            console.text += "Unlocked <color=#00FF06>area " + area + "<color=#ffffff>. If this area doesn't exist, it will be unlocked immediately upon creation.\n";
+        }
+        else if (cmd.StartsWith("area load "))
+        {
+            // substring the area number
+            string area = cmd.Substring(10);
+            int areaNum = int.Parse(area);
+            PlayerPrefs.SetInt("level" + areaNum, 1);
+            SceneManager.LoadScene(areaNum);
+        }
+        else if (cmd.StartsWith("area unload "))
+        {
+            // substring the area number
+            string area = cmd.Substring(12);
+            int areaNum = int.Parse(area);
+            console.text += "Unloaded <color=#00FF06>area " + area + "<color=#ffffff>. If this area doesn't exist, or is already unloaded, nothing will happen.\n";
         }
         else if (cmd.StartsWith("area lock all"))
         {
@@ -99,7 +139,7 @@ public class Terminal : MonoBehaviour
                 if (i != 0)
                 {
                     PlayerPrefs.SetInt("level" + i, 0);
-                    console.text += "Locked area " + i + ". If this area doesn't exist, it will be locked immediately upon creation.\n";
+                    console.text += "Locked <color=#00FF06>area " + i + "<color=#ffffff>. If this area doesn't exist, it will be locked immediately upon creation.\n";
                 }
             }
         }
@@ -108,7 +148,7 @@ public class Terminal : MonoBehaviour
             string area = cmd.Substring(10);
             int areaNum = int.Parse(area);
             PlayerPrefs.SetInt("level" + areaNum, 0);
-            console.text += "Locked area " + area + ". If this area doesn't exist, it will be locked immediately upon creation.\n";
+            console.text += "Locked <color=#00FF06>area " + area + "<color=#ffffff>. If this area doesn't exist, it will be locked immediately upon creation.\n";
         }
         else if (cmd.StartsWith("area erase "))
         {

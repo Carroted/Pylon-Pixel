@@ -57,7 +57,8 @@ public class Talk : MonoBehaviour
         if (prev.activeSelf)
         {
             System.Random rnd = new System.Random();
-            rb.velocity += new Vector2(0f, rnd.Next(-1, 2));
+
+            rb.velocity += new Vector2(0f, rnd.Next(-2, 3) * 0.5f);
 
         }
 
