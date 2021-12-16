@@ -7,6 +7,7 @@ public class DebugBG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(Application.isEditor);
+        //gameObject.SetActive(Application.isEditor);
+        gameObject.SetActive(false);
     }
 }
