@@ -17,6 +17,20 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     public GameObject firefrom;
     public GameObject firefrom2;
     public GameObject firefrom3;
+    public Sprite xmasHat;
+    public Sprite constructionHat;
+    public Sprite headphonesHat;
+    public Sprite hoodieHat;
+    public Sprite orangeHoodieHat;
+    public Sprite carrotedHoodieHat;
+    public Sprite lynx;
+    public Sprite smileHat;
+    public Sprite mustacheHat;
+    public Sprite pylonpixelHoodieHat;
+    public Sprite glitchconeHat;
+    public Sprite greenoutlineHat;
+    public Sprite whiteoutlineHat;
+
     public SpriteRenderer strip;
     public SpriteRenderer basee;
     public SpriteRenderer cone;
@@ -57,14 +71,70 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     private bool vibrate1 = false;
     private bool vibrate2 = false;
     public static bool dialogClose = false;
+    public SpriteRenderer hat;
 
-public void Hurt(float damage)
+
+    public void Hurt(float damage)
     {
         hp.health -= (damage);
     }
     // Use this for initialization
     void Start()
     {
+        if (PlayerPrefs.HasKey("hat"))
+        {
+            if (PlayerPrefs.GetString("hat") != "none")
+            {
+                if (PlayerPrefs.GetString("hat") == "xmasHat")
+                {
+                    hat.sprite = xmasHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "constructionHat")
+                {
+                    hat.sprite = constructionHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "headphonesHat")
+                {
+                    hat.sprite = headphonesHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "hoodieHat")
+                {
+                    hat.sprite = hoodieHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "orangeHoodieHat")
+                {
+                    hat.sprite = orangeHoodieHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "carrotedHoodieHat")
+                {
+                    hat.sprite = carrotedHoodieHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "smileHat")
+                {
+                    hat.sprite = smileHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "mustacheHat")
+                {
+                    hat.sprite = mustacheHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "pylonpixelHoodieHat")
+                {
+                    hat.sprite = pylonpixelHoodieHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "glitchconeHat")
+                {
+                    hat.sprite = glitchconeHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "greenoutlineHat")
+                {
+                    hat.sprite = greenoutlineHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "whiteoutlineHat")
+                {
+                    hat.sprite = whiteoutlineHat;
+                }
+            }
+        }
         if (PlayerPrefs.HasKey("DeadZoneVolume"))
         {
             deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
@@ -131,7 +201,21 @@ public void Hurt(float damage)
         }
 
         dialogClose = false;
-        cone.sprite = pyyy;
+        if (!PlayerPrefs.HasKey("lynxskin"))
+        {
+            cone.sprite = pyyy;
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("lynxskin") == 1)
+            {
+                cone.sprite = lynx;
+            }
+            else
+            {
+                cone.sprite = pyyy;
+            }
+        }
         sfx = FindObjectOfType<SFX>();
         goldcount = GameObject.FindGameObjectWithTag("goldui").GetComponent<TMPro.TMP_Text>();
         if (!endless)
@@ -262,6 +346,18 @@ public void Hurt(float damage)
     public void CloseTheCloseDialog()
     {
         dialogClose = false;
+    }
+    public void SetRotationLikeWhenYouPressA()
+    {
+        gameObject.transform.localScale = new Vector3(-1, 1, 1);
+    }
+    public void SetParent(GameObject parent)
+    {
+        gameObject.transform.parent = parent.transform;
+    }
+    public void SetLocalX(float x)
+    {
+        gameObject.transform.localPosition = new Vector3(x, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z);
     }
     public void Fire()
     {

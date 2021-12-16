@@ -24,6 +24,20 @@ public class Store : MonoBehaviour
     public GameObject antisLocked;
     public GameObject antibLocked;
     public Sprite nothing;
+    public string hatState;
+    public Image hat;
+    public Sprite xmasHat;
+    public Sprite constructionHat;
+    public Sprite headphonesHat;
+    public Sprite hoodieHat;
+    public Sprite orangeHoodieHat;
+    public Sprite carrotedHoodieHat;
+    public Sprite smileHat;
+    public Sprite mustacheHat;
+    public Sprite pylonpixelHoodieHat;
+    public Sprite glitchconeHat;
+    public Sprite greenoutlineHat;
+    public Sprite whiteoutlineHat;
     void Awake()
     {
 
@@ -31,6 +45,15 @@ public class Store : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.HasKey("hat"))
+        {
+            hatState = PlayerPrefs.GetString("hat");
+        }
+        else
+        {
+            hatState = "none";
+            PlayerPrefs.SetString("hat", "none");
+        }
         nbs = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
         if (PlayerPrefs.HasKey("antistrip"))
         {
@@ -135,6 +158,8 @@ public class Store : MonoBehaviour
             PlayerPrefs.SetString("base", "regular");
             nbs.basee.sprite = basee.sprite;
         }
+        PlayerPrefs.SetString("hat", hatState);
+        nbs.hat.sprite = hat.sprite;
         PlayerPrefs.Save();
         gameObject.SetActive(false);
     }
@@ -202,6 +227,57 @@ public class Store : MonoBehaviour
                 frames = 0;
             }
         }
-
+        if (hatState == "none")
+        {
+            hat.sprite = nothing;
+        }
+        else if (hatState == "xmasHat")
+        {
+            hat.sprite = xmasHat;
+        }
+        else if (hatState == "headphonesHat")
+        {
+            hat.sprite = headphonesHat;
+        }
+        else if (hatState == "hoodieHat")
+        {
+            hat.sprite = hoodieHat;
+        }
+        else if (hatState == "orangeHoodieHat")
+        {
+            hat.sprite = orangeHoodieHat;
+        }
+        else if (hatState == "carrotedHoodieHat")
+        {
+            hat.sprite = carrotedHoodieHat;
+        }
+        else if (hatState == "constructionHat")
+        {
+            hat.sprite = constructionHat;
+        }
+        else if (hatState == "smileHat")
+        {
+            hat.sprite = smileHat;
+        }
+        else if (hatState == "mustacheHat")
+        {
+            hat.sprite = mustacheHat;
+        }
+        else if (hatState == "pylonpixelHoodieHat")
+        {
+            hat.sprite = pylonpixelHoodieHat;
+        }
+        else if (hatState == "glitchconeHat")
+        {
+            hat.sprite = glitchconeHat;
+        }
+        else if (hatState == "greenoutlineHat")
+        {
+            hat.sprite = greenoutlineHat;
+        }
+        else if (hatState == "whiteoutlineHat")
+        {
+            hat.sprite = whiteoutlineHat;
+        }
     }
 }
