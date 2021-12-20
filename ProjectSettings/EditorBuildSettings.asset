@@ -132,6 +132,9 @@ EditorBuildSettings:
     path: Assets/Scenes/41 Breathe In.unity
     guid: f99862bff1ba6d64f888a3efe814c458
   - enabled: 1
+    path: Assets/Scenes/43 The Lynx Has Not Finished.unity
+    guid: 636bc37c930d47042a98132fdcc61713
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1
