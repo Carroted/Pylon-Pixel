@@ -61,6 +61,8 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     public Sprite antibase;
     public Sprite antistrip;
     public Sprite nothing;
+    public Sprite topHat;
+    public Sprite redTopHat;
     //public Animator animator;
     //Animator m_Animator;
     public int livess;
@@ -132,6 +134,14 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
                 else if (PlayerPrefs.GetString("hat") == "whiteoutlineHat")
                 {
                     hat.sprite = whiteoutlineHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "topHat")
+                {
+                    hat.sprite = topHat;
+                }
+                else if (PlayerPrefs.GetString("hat") == "redTopHat")
+                {
+                    hat.sprite = redTopHat;
                 }
             }
         }

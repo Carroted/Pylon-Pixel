@@ -1097,6 +1097,8 @@ MonoBehaviour:
   antibase: {fileID: 21300000, guid: 8e428cef7f91b7c4fbdfa498d6e43cbc, type: 3}
   antistrip: {fileID: 21300000, guid: 68a92e20a1378c64a89451b265a1b6b1, type: 3}
   nothing: {fileID: 21300000, guid: a5694dc0ddc5f544fb2217054fc3174b, type: 3}
+  topHat: {fileID: 21300000, guid: 6e3890d53c9fb66489ddc1ceef001170, type: 3}
+  redTopHat: {fileID: 21300000, guid: 9789da19be236484da7017fe7ec4be8d, type: 3}
   livess: 3
   vibrationTimerDelay: 0.15
   hat: {fileID: 891860944431138944}

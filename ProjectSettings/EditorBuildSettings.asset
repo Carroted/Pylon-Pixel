@@ -123,6 +123,15 @@ EditorBuildSettings:
     path: Assets/Scenes/38 WhatAreWeFightingFor.unity
     guid: c244569dd4c55d443b4b51ab67659951
   - enabled: 1
+    path: Assets/Scenes/39 PleaseTheBlob.unity
+    guid: 1e5ddbd2ca26d1b4d9af690ceb7ed5df
+  - enabled: 1
+    path: Assets/Scenes/40 Time.unity
+    guid: 85b8c0d6f5a9b514cbdd12fc101cbe4b
+  - enabled: 1
+    path: Assets/Scenes/41 Breathe In.unity
+    guid: f99862bff1ba6d64f888a3efe814c458
+  - enabled: 1
     path: Assets/Scenes/51 AlmostThere.unity
     guid: f8cc7ec3d8cb41549a926a62d09ce0d0
   - enabled: 1

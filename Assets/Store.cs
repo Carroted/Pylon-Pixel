@@ -38,6 +38,8 @@ public class Store : MonoBehaviour
     public Sprite glitchconeHat;
     public Sprite greenoutlineHat;
     public Sprite whiteoutlineHat;
+    public Sprite topHat;
+    public Sprite redTopHat;
     void Awake()
     {
 
@@ -278,6 +280,14 @@ public class Store : MonoBehaviour
         else if (hatState == "whiteoutlineHat")
         {
             hat.sprite = whiteoutlineHat;
+        }
+        else if (hatState == "topHat")
+        {
+            hat.sprite = topHat;
+        }
+        else if (hatState == "redTopHat")
+        {
+            hat.sprite = redTopHat;
         }
     }
 }

@@ -5520,7 +5520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51456cd67ad04664eac85177989c587e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {x: 50, y: 0, z: 0}
+  move: {x: 65, y: 0, z: 0}
   forceMode: 0
 --- !u!1001 &1277532923
 PrefabInstance:
