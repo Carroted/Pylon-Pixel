@@ -16510,7 +16510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What Now?
+  m_text: Revolution
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -29895,12 +29895,12 @@ GameObject:
   - component: {fileID: 1733140981}
   - component: {fileID: 1733140980}
   m_Layer: 5
-  m_Name: 46
+  m_Name: Knowledge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1733140979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30015,7 +30015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 677cc0e53bd160e4692fe0c038de0042, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73ca4187513201f479118f0ef9065ec6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33218,12 +33218,12 @@ GameObject:
   - component: {fileID: 1929087842}
   - component: {fileID: 1929087841}
   m_Layer: 5
-  m_Name: 45
+  m_Name: Revolution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1929087840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33338,7 +33338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84ce23ddaf3e5eb438aa6967509346bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2df1c054b1176324cb145fe6f39c32ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34829,7 +34829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When Cones Fly
+  m_text: Knowledge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
