@@ -604,7 +604,7 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
             {
                 // m_Animator.SetBool("jumping", false);
             }
-            rb.freezeRotation = true;
+            //rb.freezeRotation = true;
             if (hp.alive)
             {
                 if (Input.GetAxisRaw("Horizontal") >= 0.6f || j.Horizontal >= deadZone)
