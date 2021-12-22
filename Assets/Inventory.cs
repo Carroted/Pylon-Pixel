@@ -32,10 +32,9 @@ public class Inventory : MonoBehaviour
     int prev = 2;
     void Start()
     {
-        if (nbs == null)
-        {
+        
             nbs = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
-        }
+        
 
     }
     public void Lose3()
