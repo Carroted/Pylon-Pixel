@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -64,3 +64,4 @@ public class LevelGenerator : EditorWindow
         Debug.Log("Level generated successfully with " + numberOfChunks + " chunks");
     }
 }
+*/

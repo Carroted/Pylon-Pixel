@@ -3587,7 +3587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockGroup: {fileID: 305837229}
-  achievementKey: level37
+  achievementKey: level52
   count: 1
   unlocked: 0
 --- !u!1 &1548705358
@@ -7037,7 +7037,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3198462697082921235}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.43730962
+  m_Size: 0.41397223
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

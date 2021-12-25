@@ -8684,6 +8684,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8806,6 +8807,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
   music: {fileID: 1908573212}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5efde15f7a9604cb58144af5dd6d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &529499657
 GameObject:
   m_ObjectHideFlags: 0
@@ -14498,7 +14511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.8.2
+  m_text: Version 1.0.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -15524,7 +15537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What Now?
+  m_text: Compliance Guarantee
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -21567,7 +21580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pylon Pixel 0.8.2
+  m_text: Pylon Pixel 1.0.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -24380,7 +24393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1396606354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25089,7 +25102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Slow The Cone Down
+  m_text: For Tea Ayyy T
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
   m_sharedMaterial: {fileID: -5980072877769931321, guid: 641ffbba39b549c42bc0904eaccddc3b, type: 2}
@@ -26599,12 +26612,12 @@ GameObject:
   - component: {fileID: 1483512419}
   - component: {fileID: 1483512418}
   m_Layer: 5
-  m_Name: 50
+  m_Name: Compliance Guarantee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1483512417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26719,7 +26732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84ce23ddaf3e5eb438aa6967509346bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e281cf2aa2b98c24686a2b21f4ebf143, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33011,12 +33024,12 @@ GameObject:
   - component: {fileID: 1905167489}
   - component: {fileID: 1905167488}
   m_Layer: 5
-  m_Name: 48
+  m_Name: For Tea Ayyy T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1905167487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33131,7 +33144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 01947ee3135c7f34a8c3d7b40fa32b8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c42c93ae2ad59e40a6e49c115ace342, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
