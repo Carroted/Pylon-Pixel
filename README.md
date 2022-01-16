@@ -6,3 +6,8 @@ The game was started by [Alex_Sour](https://github.com/Alex-Sour) in 2017, but i
 License can be found in [LICENSE.md](https://github.com/Carroted/Pylon-Pixel/blob/main/LICENSE.md).
 Pylon Pixel™ is a trademark of Carroted. It is to be used in game/app names by Carroted only.
 The app icon is also a trademark of Carroted. It is to be used as a game/app icon by Carroted only.
+
+https://carroted.ca
+
+# Releases
+You can find releases on [Google Play](https://play.google.com/store/apps/details?id=ca.Carroted.PylonPixel).
