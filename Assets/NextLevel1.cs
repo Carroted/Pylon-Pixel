@@ -16,13 +16,13 @@ public class NextLevel1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (PlayerPrefs.HasKey("deaths"))
+            if (BetterPrefs.HasKey("deaths"))
             {
-                PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths") + 1);
+                BetterPrefs.SetInt("deaths", BetterPrefs.GetInt("deaths") + 1);
             }
             else
             {
-                PlayerPrefs.SetInt("deaths", 1);
+                BetterPrefs.SetInt("deaths", 1);
             }
             if (health0)
             {

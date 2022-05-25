@@ -25,7 +25,7 @@ public class AnimLevel : MonoBehaviour
     }
     public void SaveAndLeave(string levely)
     {
-        PlayerPrefs.Save();
+        BetterPrefs.Save();
         Trigger(levely);
     }
     public void Trigger(string levely)
@@ -38,7 +38,7 @@ public class AnimLevel : MonoBehaviour
     {
 
         circle.SetTrigger("EndLevel");
-        PlayerPrefs.Save();
+        BetterPrefs.Save();
 
 
 

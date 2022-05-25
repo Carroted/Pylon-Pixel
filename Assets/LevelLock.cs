@@ -22,17 +22,17 @@ public class LevelLock : MonoBehaviour
             return;
         }
 
-        if (PlayerPrefs.HasKey("level" + level))
+        if (BetterPrefs.HasKey("level" + level))
         {
 
-            button.interactable = PlayerPrefs.GetInt("level" + level) == 1;
-            lockk.SetActive(PlayerPrefs.GetInt("level" + level) == 0);
+            button.interactable = BetterPrefs.GetInt("level" + level) == 1;
+            lockk.SetActive(BetterPrefs.GetInt("level" + level) == 0);
 
         }
         else
         {
-            PlayerPrefs.SetInt("level" + level, 0);
-            PlayerPrefs.Save();
+            BetterPrefs.SetInt("level" + level, 0);
+            BetterPrefs.Save();
             button.interactable = false;
             lockk.SetActive(true);
         }

@@ -47,33 +47,33 @@ public class Store : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("hat"))
+        if (BetterPrefs.HasKey("hat"))
         {
-            hatState = PlayerPrefs.GetString("hat");
+            hatState = BetterPrefs.GetString("hat");
         }
         else
         {
             hatState = "none";
-            PlayerPrefs.SetString("hat", "none");
+            BetterPrefs.SetString("hat", "none");
         }
         nbs = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();
-        if (PlayerPrefs.HasKey("antistrip"))
+        if (BetterPrefs.HasKey("antistrip"))
         {
-            antis = PlayerPrefs.GetInt("antistrip") == 1;
+            antis = BetterPrefs.GetInt("antistrip") == 1;
         }
         else
         {
             antis = false;
-            PlayerPrefs.SetInt("antistrip", 0);
+            BetterPrefs.SetInt("antistrip", 0);
         }
-        if (PlayerPrefs.HasKey("antibase"))
+        if (BetterPrefs.HasKey("antibase"))
         {
-            antib = PlayerPrefs.GetInt("antibase") == 1;
+            antib = BetterPrefs.GetInt("antibase") == 1;
         }
         else
         {
             antib = false;
-            PlayerPrefs.SetInt("antibase", 0);
+            BetterPrefs.SetInt("antibase", 0);
         }
         doframes = true;
         antisLocked.SetActive(!antis);
@@ -112,8 +112,8 @@ public class Store : MonoBehaviour
         if (nbs.gold >= price)
         {
             nbs.gold -= price;
-            PlayerPrefs.SetInt("gold", nbs.gold);
-            PlayerPrefs.Save();
+            BetterPrefs.SetInt("gold", nbs.gold);
+            BetterPrefs.Save();
             gold.text = nbs.gold.ToString();
             return true;
         }
@@ -121,48 +121,48 @@ public class Store : MonoBehaviour
     }
     public void Save()
     {
-        PlayerPrefs.SetString("color", ColorUtility.ToHtmlStringRGB(cone.color));
+        BetterPrefs.SetString("color", ColorUtility.ToHtmlStringRGB(cone.color));
         nbs.cone.color = cone.color;
         if ((strip.sprite == antistrip || strip.sprite == nbs.antistrip) && strip.enabled == true)
         {
             print("strip is anti, using anti lmao");
-            PlayerPrefs.SetString("strip", "anti");
+            BetterPrefs.SetString("strip", "anti");
             nbs.strip.sprite = strip.sprite;
         }
         else if (!strip.enabled || strip.sprite == nbs.nothing)
         {
             print("strip is disabled, using none lmao");
-            PlayerPrefs.SetString("strip", "none");
+            BetterPrefs.SetString("strip", "none");
             nbs.strip.sprite = nothing;
         }
         else if (strip.enabled == true)
         {
             print("strip is enabled, using regular lmao");
-            PlayerPrefs.SetString("strip", "regular");
+            BetterPrefs.SetString("strip", "regular");
             nbs.strip.sprite = strip.sprite;
 
         }
         if ((basee.sprite == antibase || basee.sprite == nbs.antibase) && basee.enabled == true)
         {
             print("base is anti, using anti lmao");
-            PlayerPrefs.SetString("base", "anti");
+            BetterPrefs.SetString("base", "anti");
             nbs.basee.sprite = basee.sprite;
         }
         else if ((!basee.enabled) || basee.sprite == nbs.nothing)
         {
             print("base is disabled, using none");
-            PlayerPrefs.SetString("base", "none");
+            BetterPrefs.SetString("base", "none");
             nbs.basee.sprite = nothing;
         }
         else if (basee.enabled)
         {
             print("base is enabled, using regular");
-            PlayerPrefs.SetString("base", "regular");
+            BetterPrefs.SetString("base", "regular");
             nbs.basee.sprite = basee.sprite;
         }
-        PlayerPrefs.SetString("hat", hatState);
+        BetterPrefs.SetString("hat", hatState);
         nbs.hat.sprite = hat.sprite;
-        PlayerPrefs.Save();
+        BetterPrefs.Save();
         gameObject.SetActive(false);
     }
     public void Reset()
@@ -179,7 +179,7 @@ public class Store : MonoBehaviour
             if (Pay(700))
             {
                 antis = true;
-                PlayerPrefs.SetInt("antistrip", 1);
+                BetterPrefs.SetInt("antistrip", 1);
                 antisLocked.SetActive(false);
 
 
@@ -204,7 +204,7 @@ public class Store : MonoBehaviour
             if (Pay(150))
             {
                 antib = true;
-                PlayerPrefs.SetInt("antibase", 1);
+                BetterPrefs.SetInt("antibase", 1);
                 antibLocked.SetActive(false);
             }
         }

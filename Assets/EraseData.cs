@@ -10,8 +10,8 @@ public class EraseData : MonoBehaviour
         // WARNING: DO NOT CALL THIS UNLESS YOU WISH TO ERASE ALL PROGRESS
 
         // Erase all progress
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
+        BetterPrefs.DeleteAll();
+        BetterPrefs.Save();
         SceneManager.LoadScene(0);
     }
 }

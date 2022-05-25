@@ -9,7 +9,7 @@ public class ContinueButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(PlayerPrefs.HasKey("level2"));
+        gameObject.SetActive(BetterPrefs.HasKey("level2"));
     }
 
     // Update is called once per frame

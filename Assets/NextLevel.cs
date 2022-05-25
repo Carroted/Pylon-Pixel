@@ -32,7 +32,7 @@ public class NextLevel : MonoBehaviour
     }
     public void SaveAndLeave(int index)
     {
-        PlayerPrefs.Save();
+        BetterPrefs.Save();
         erase = false;
         Trigger(index);
     }
@@ -50,9 +50,9 @@ public class NextLevel : MonoBehaviour
 
         circle.SetTrigger("EndLevel");
 
-        PlayerPrefs.SetInt("level" + index, 1);
-        PlayerPrefs.SetInt("gold", nbs.gold);
-        PlayerPrefs.Save();
+        BetterPrefs.SetInt("level" + index, 1);
+        BetterPrefs.SetInt("gold", nbs.gold);
+        BetterPrefs.Save();
 
 
 

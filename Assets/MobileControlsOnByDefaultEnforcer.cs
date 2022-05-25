@@ -7,10 +7,10 @@ public class MobileControlsOnByDefaultEnforcer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("MobileControls"))
+        if (!BetterPrefs.HasKey("MobileControls"))
         {
-            PlayerPrefs.SetInt("MobileControls", 1);
-            PlayerPrefs.Save();
+            BetterPrefs.SetInt("MobileControls", 1);
+            BetterPrefs.Save();
         }
     }
 

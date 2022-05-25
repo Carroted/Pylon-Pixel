@@ -10,21 +10,21 @@ public class VolumeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("SFXVolume"))
+        if (!BetterPrefs.HasKey("SFXVolume"))
         {
-            PlayerPrefs.SetFloat("SFXVolume", 5);
+            BetterPrefs.SetFloat("SFXVolume", 5);
         }
-        if (!PlayerPrefs.HasKey("MusicVolume"))
+        if (!BetterPrefs.HasKey("MusicVolume"))
         {
-            PlayerPrefs.SetFloat("MusicVolume", 5);
+            BetterPrefs.SetFloat("MusicVolume", 5);
         }
         if (music != null)
         {
-            music.volume = PlayerPrefs.GetFloat("MusicVolume");
+            music.volume = BetterPrefs.GetFloat("MusicVolume");
         }
         if (sfx != null)
         {
-            sfx.volume = PlayerPrefs.GetFloat("SFXVolume");
+            sfx.volume = BetterPrefs.GetFloat("SFXVolume");
         }
     }
 
@@ -34,11 +34,11 @@ public class VolumeManager : MonoBehaviour
         if (music != null)
         {
 
-            music.volume = PlayerPrefs.GetFloat("MusicVolume") / 10;
+            music.volume = BetterPrefs.GetFloat("MusicVolume") / 10;
         }
         if (sfx != null)
         {
-            sfx.volume = PlayerPrefs.GetFloat("SFXVolume") / 10;
+            sfx.volume = BetterPrefs.GetFloat("SFXVolume") / 10;
         }
     }
 }

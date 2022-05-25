@@ -9,9 +9,9 @@ public class RememberPickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey(uniqueId.uniqueId))
+        if (BetterPrefs.HasKey(uniqueId.uniqueId))
         {
-            if (PlayerPrefs.GetInt(uniqueId.uniqueId) == 1)
+            if (BetterPrefs.GetInt(uniqueId.uniqueId) == 1)
             {
                 gameObject.SetActive(false);
             }

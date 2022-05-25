@@ -8,9 +8,9 @@ public class MobileControlsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("MobileControls"))
+        if (BetterPrefs.HasKey("MobileControls"))
         {
-            if (PlayerPrefs.GetInt("MobileControls") == 0)
+            if (BetterPrefs.GetInt("MobileControls") == 0)
             {
                 gameObject.SetActive(false);
             }
@@ -20,12 +20,12 @@ public class MobileControlsManager : MonoBehaviour
             // If we're not on a mobile device, or we're in the editor, then disable the mobile controls. This can be toggled in settings later.
             //if ((Application.isEditor || !Application.isMobilePlatform))
             //{
-            //    PlayerPrefs.SetInt("MobileControls", 0);
+            //    BetterPrefs.SetInt("MobileControls", 0);
             //    gameObject.SetActive(false);
             //}
             //else
             //{
-                PlayerPrefs.SetInt("MobileControls", 1);
+            BetterPrefs.SetInt("MobileControls", 1);
             //}
         }
     }

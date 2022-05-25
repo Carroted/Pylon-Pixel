@@ -102,15 +102,15 @@ public class NewMultiplayerScript : NetworkBehaviour
             gold++;
             if (endless)
             {
-                PlayerPrefs.SetInt("egold", gold);
+                BetterPrefs.SetInt("egold", gold);
             }
             else
             {
-                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
-                PlayerPrefs.SetInt("gold", gold);
+                BetterPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                BetterPrefs.SetInt("gold", gold);
             }
             Destroy(target.gameObject);
-            PlayerPrefs.Save();
+            BetterPrefs.Save();
         }
         if (target.gameObject.tag == "goldbig")
         {
@@ -120,15 +120,15 @@ public class NewMultiplayerScript : NetworkBehaviour
             gold += 10;
             if (endless)
             {
-                PlayerPrefs.SetInt("egold", gold);
+                BetterPrefs.SetInt("egold", gold);
             }
             else
             {
-                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
-                PlayerPrefs.SetInt("gold", gold);
+                BetterPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                BetterPrefs.SetInt("gold", gold);
             }
             Destroy(target.gameObject);
-            PlayerPrefs.Save();
+            BetterPrefs.Save();
         }
     }
     public void Jump()
@@ -350,7 +350,7 @@ public class NewMultiplayerScript : NetworkBehaviour
         {
             return;
         }
-        deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+        deadZone = BetterPrefs.GetFloat("DeadZoneVolume") / 20;
 
         if (Input.GetButtonDown("Dialog"))
         {
@@ -469,13 +469,13 @@ public class NewMultiplayerScript : NetworkBehaviour
         {
             // hp.alive = true;
             NextLevel.Static(true);
-            if (PlayerPrefs.HasKey("deaths"))
+            if (BetterPrefs.HasKey("deaths"))
             {
-                PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths") + 1);
+                BetterPrefs.SetInt("deaths", BetterPrefs.GetInt("deaths") + 1);
             }
             else
             {
-                PlayerPrefs.SetInt("deaths", 1);
+                BetterPrefs.SetInt("deaths", 1);
             }
             hp.alive = false;
             hp.health = 0;
@@ -486,29 +486,29 @@ public class NewMultiplayerScript : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            if (PlayerPrefs.HasKey("DeadZoneVolume"))
+            if (BetterPrefs.HasKey("DeadZoneVolume"))
             {
-                deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+                deadZone = BetterPrefs.GetFloat("DeadZoneVolume") / 20;
             }
             else
             {
-                PlayerPrefs.SetFloat("DeadZoneVolume", deadZone * 20);
+                BetterPrefs.SetFloat("DeadZoneVolume", deadZone * 20);
             }
-            if (PlayerPrefs.HasKey("color"))
+            if (BetterPrefs.HasKey("color"))
             {
                 Color colory;
-                ColorUtility.TryParseHtmlString("#" + PlayerPrefs.GetString("color"), out colory);
+                ColorUtility.TryParseHtmlString("#" + BetterPrefs.GetString("color"), out colory);
                 cone.color = colory;
             }
-            if (PlayerPrefs.HasKey("strip"))
+            if (BetterPrefs.HasKey("strip"))
             {
-                print(PlayerPrefs.GetString("strip"));
-                if (PlayerPrefs.GetString("strip") == "regular")
+                print(BetterPrefs.GetString("strip"));
+                if (BetterPrefs.GetString("strip") == "regular")
                 {
                     strip.sprite = regularstrip;
                     print("strip is regular");
                 }
-                else if (PlayerPrefs.GetString("strip") == "none")
+                else if (BetterPrefs.GetString("strip") == "none")
                 {
                     strip.sprite = nothing;
                     print("strip is none");
@@ -523,17 +523,17 @@ public class NewMultiplayerScript : NetworkBehaviour
             {
                 print("no strip saved using regular");
                 strip.sprite = regularstrip;
-                PlayerPrefs.SetString("strip", "regular");
+                BetterPrefs.SetString("strip", "regular");
             }
-            if (PlayerPrefs.HasKey("base"))
+            if (BetterPrefs.HasKey("base"))
             {
-                print(PlayerPrefs.GetString("base"));
-                if (PlayerPrefs.GetString("base") == "regular")
+                print(BetterPrefs.GetString("base"));
+                if (BetterPrefs.GetString("base") == "regular")
                 {
                     print("base is regular");
                     basee.sprite = regularbase;
                 }
-                else if (PlayerPrefs.GetString("base") == "none")
+                else if (BetterPrefs.GetString("base") == "none")
                 {
                     print("base is none");
                     basee.sprite = nothing;
@@ -548,7 +548,7 @@ public class NewMultiplayerScript : NetworkBehaviour
             {
                 print("no base saved using regular");
                 basee.sprite = regularbase;
-                PlayerPrefs.SetString("base", "regular");
+                BetterPrefs.SetString("base", "regular");
             }
 
             dialogClose = false;
@@ -557,24 +557,24 @@ public class NewMultiplayerScript : NetworkBehaviour
             goldcount = GameObject.FindGameObjectWithTag("goldui").GetComponent<TMPro.TMP_Text>();
             if (!endless)
             {
-                if (!PlayerPrefs.HasKey("gold"))
+                if (!BetterPrefs.HasKey("gold"))
                 {
-                    PlayerPrefs.SetInt("gold", debugAddGold);
+                    BetterPrefs.SetInt("gold", debugAddGold);
                 }
                 else
                 {
-                    gold = PlayerPrefs.GetInt("gold") + debugAddGold;
+                    gold = BetterPrefs.GetInt("gold") + debugAddGold;
                 }
             }
             else
             {
-                if (!PlayerPrefs.HasKey("egold"))
+                if (!BetterPrefs.HasKey("egold"))
                 {
-                    PlayerPrefs.SetInt("egold", debugAddGold);
+                    BetterPrefs.SetInt("egold", debugAddGold);
                 }
                 else
                 {
-                    gold = PlayerPrefs.GetInt("egold") + debugAddGold;
+                    gold = BetterPrefs.GetInt("egold") + debugAddGold;
                 }
             }
 

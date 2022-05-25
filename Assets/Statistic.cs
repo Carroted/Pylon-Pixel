@@ -18,6 +18,6 @@ public class Statistic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = start + ": " + PlayerPrefs.GetInt(key);
+        text.text = start + ": " + BetterPrefs.GetInt(key);
     }
 }

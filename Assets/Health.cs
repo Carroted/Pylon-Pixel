@@ -71,13 +71,13 @@ public class Health : MonoBehaviour
                 alive = false;
                 if (enemy)
                 {
-                    if (PlayerPrefs.HasKey(addition + "antikills"))
+                    if (BetterPrefs.HasKey(addition + "antikills"))
                     {
-                        PlayerPrefs.SetInt(addition + "antikills", PlayerPrefs.GetInt(addition + "antikills") + 1);
+                        BetterPrefs.SetInt(addition + "antikills", BetterPrefs.GetInt(addition + "antikills") + 1);
                     }
                     else
                     {
-                        PlayerPrefs.SetInt(addition + "antikills", 1);
+                        BetterPrefs.SetInt(addition + "antikills", 1);
                     }
                 }
                 this.enabled = false;
@@ -94,13 +94,13 @@ public class Health : MonoBehaviour
             //alive = false;
             if (enemy)
             {
-                if (PlayerPrefs.HasKey(addition + "antikills"))
+                if (BetterPrefs.HasKey(addition + "antikills"))
                 {
-                    PlayerPrefs.SetInt(addition + "antikills", PlayerPrefs.GetInt(addition + "antikills") + 1);
+                    BetterPrefs.SetInt(addition + "antikills", BetterPrefs.GetInt(addition + "antikills") + 1);
                 }
                 else
                 {
-                    PlayerPrefs.SetInt(addition + "antikills", 1);
+                    BetterPrefs.SetInt(addition + "antikills", 1);
                 }
             }
             healthbar.gameObject.SetActive(true);

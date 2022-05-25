@@ -24,7 +24,7 @@ public class PaintBucket : MonoBehaviour
                 unlocked = true;
                 lockedStuff.SetActive(false);
 
-                PlayerPrefs.SetInt(id, 1);
+                BetterPrefs.SetInt(id, 1);
             }
         }
         else
@@ -36,18 +36,18 @@ public class PaintBucket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey(id))
+        if (BetterPrefs.HasKey(id))
         {
-            unlocked = PlayerPrefs.GetInt(id) == 1;
+            unlocked = BetterPrefs.GetInt(id) == 1;
         }
         else if (unlockedByDefault)
         {
-            PlayerPrefs.SetInt(id, 1);
+            BetterPrefs.SetInt(id, 1);
             unlocked = true;
         }
         else
         {
-            PlayerPrefs.SetInt(id, 0);
+            BetterPrefs.SetInt(id, 0);
         }
     }
 

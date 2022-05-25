@@ -13,7 +13,7 @@ public class MobileControlsToggle : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        toggle.isOn = PlayerPrefs.GetInt("MobileControls") == 1;
+        toggle.isOn = BetterPrefs.GetInt("MobileControls") == 1;
     }
     void Start()
     {
@@ -36,7 +36,7 @@ public class MobileControlsToggle : MonoBehaviour
         if (toggle.isOn)
         {
             Debug.Log("Mobile Controls On");
-            PlayerPrefs.SetInt("MobileControls", 1);
+            BetterPrefs.SetInt("MobileControls", 1);
             if (mobileControls != null)
             {
                 mobileControls.SetActive(true);
@@ -45,13 +45,13 @@ public class MobileControlsToggle : MonoBehaviour
         else
         {
             Debug.Log("Mobile Controls Off");
-            PlayerPrefs.SetInt("MobileControls", 0);
+            BetterPrefs.SetInt("MobileControls", 0);
             if (mobileControls != null)
             {
                 mobileControls.SetActive(false);
             }
         }
-        PlayerPrefs.Save();
+        BetterPrefs.Save();
     }
     // Update is called once per frame
     void Update()

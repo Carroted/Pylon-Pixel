@@ -75,6 +75,18 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     public static bool dialogClose = false;
     public SpriteRenderer hat;
 
+    void Awake()
+    {
+        if (BetterPrefs.currentSave == null)
+        {
+            BetterPrefs.Load(Application.persistentDataPath + "/save.pypix"); // pypix is short for Pylon Pixel
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        BetterPrefs.Save();
+    }
 
     public void Hurt(float damage)
     {
@@ -83,91 +95,91 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     // Use this for initialization
     void Start()
     {
-        if (PlayerPrefs.HasKey("hat"))
+        if (BetterPrefs.HasKey("hat"))
         {
-            if (PlayerPrefs.GetString("hat") != "none")
+            if (BetterPrefs.GetString("hat") != "none")
             {
-                if (PlayerPrefs.GetString("hat") == "xmasHat")
+                if (BetterPrefs.GetString("hat") == "xmasHat")
                 {
                     hat.sprite = xmasHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "constructionHat")
+                else if (BetterPrefs.GetString("hat") == "constructionHat")
                 {
                     hat.sprite = constructionHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "headphonesHat")
+                else if (BetterPrefs.GetString("hat") == "headphonesHat")
                 {
                     hat.sprite = headphonesHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "hoodieHat")
+                else if (BetterPrefs.GetString("hat") == "hoodieHat")
                 {
                     hat.sprite = hoodieHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "orangeHoodieHat")
+                else if (BetterPrefs.GetString("hat") == "orangeHoodieHat")
                 {
                     hat.sprite = orangeHoodieHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "carrotedHoodieHat")
+                else if (BetterPrefs.GetString("hat") == "carrotedHoodieHat")
                 {
                     hat.sprite = carrotedHoodieHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "smileHat")
+                else if (BetterPrefs.GetString("hat") == "smileHat")
                 {
                     hat.sprite = smileHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "mustacheHat")
+                else if (BetterPrefs.GetString("hat") == "mustacheHat")
                 {
                     hat.sprite = mustacheHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "pylonpixelHoodieHat")
+                else if (BetterPrefs.GetString("hat") == "pylonpixelHoodieHat")
                 {
                     hat.sprite = pylonpixelHoodieHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "glitchconeHat")
+                else if (BetterPrefs.GetString("hat") == "glitchconeHat")
                 {
                     hat.sprite = glitchconeHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "greenoutlineHat")
+                else if (BetterPrefs.GetString("hat") == "greenoutlineHat")
                 {
                     hat.sprite = greenoutlineHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "whiteoutlineHat")
+                else if (BetterPrefs.GetString("hat") == "whiteoutlineHat")
                 {
                     hat.sprite = whiteoutlineHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "topHat")
+                else if (BetterPrefs.GetString("hat") == "topHat")
                 {
                     hat.sprite = topHat;
                 }
-                else if (PlayerPrefs.GetString("hat") == "redTopHat")
+                else if (BetterPrefs.GetString("hat") == "redTopHat")
                 {
                     hat.sprite = redTopHat;
                 }
             }
         }
-        if (PlayerPrefs.HasKey("DeadZoneVolume"))
+        if (BetterPrefs.HasKey("DeadZoneVolume"))
         {
-            deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+            deadZone = BetterPrefs.GetFloat("DeadZoneVolume") / 20;
         }
         else
         {
-            PlayerPrefs.SetFloat("DeadZoneVolume", deadZone * 20);
+            BetterPrefs.SetFloat("DeadZoneVolume", deadZone * 20);
         }
-        if (PlayerPrefs.HasKey("color"))
+        if (BetterPrefs.HasKey("color"))
         {
             Color colory;
-            ColorUtility.TryParseHtmlString("#" + PlayerPrefs.GetString("color"), out colory);
+            ColorUtility.TryParseHtmlString("#" + BetterPrefs.GetString("color"), out colory);
             cone.color = colory;
         }
-        if (PlayerPrefs.HasKey("strip"))
+        if (BetterPrefs.HasKey("strip"))
         {
-            print(PlayerPrefs.GetString("strip"));
-            if (PlayerPrefs.GetString("strip") == "regular")
+            print(BetterPrefs.GetString("strip"));
+            if (BetterPrefs.GetString("strip") == "regular")
             {
                 strip.sprite = regularstrip;
                 print("strip is regular");
             }
-            else if (PlayerPrefs.GetString("strip") == "none")
+            else if (BetterPrefs.GetString("strip") == "none")
             {
                 strip.sprite = nothing;
                 print("strip is none");
@@ -182,17 +194,17 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
         {
             print("no strip saved using regular");
             strip.sprite = regularstrip;
-            PlayerPrefs.SetString("strip", "regular");
+            BetterPrefs.SetString("strip", "regular");
         }
-        if (PlayerPrefs.HasKey("base"))
+        if (BetterPrefs.HasKey("base"))
         {
-            print(PlayerPrefs.GetString("base"));
-            if (PlayerPrefs.GetString("base") == "regular")
+            print(BetterPrefs.GetString("base"));
+            if (BetterPrefs.GetString("base") == "regular")
             {   // Oh, you know Crystalius? He's... well.. he's a little gullible.
                 print("base is regular");
                 basee.sprite = regularbase;
             }
-            else if (PlayerPrefs.GetString("base") == "none")
+            else if (BetterPrefs.GetString("base") == "none")
             {
                 print("base is none");
                 basee.sprite = nothing;
@@ -207,17 +219,17 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
         { // Yeah, I know. I mean, he's cool though. That Will guy on the other hand.. something's... off about him.
             print("no base saved using regular");
             basee.sprite = regularbase;
-            PlayerPrefs.SetString("base", "regular");
+            BetterPrefs.SetString("base", "regular");
         }
 
         dialogClose = false;
-        if (!PlayerPrefs.HasKey("lynxskin"))
+        if (!BetterPrefs.HasKey("lynxskin"))
         {
             cone.sprite = pyyy;
         }
         else
         {
-            if (PlayerPrefs.GetInt("lynxskin") == 1)
+            if (BetterPrefs.GetInt("lynxskin") == 1)
             {
                 cone.sprite = lynx;
             }
@@ -230,24 +242,24 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
         goldcount = GameObject.FindGameObjectWithTag("goldui").GetComponent<TMPro.TMP_Text>();
         if (!endless)
         {
-            if (!PlayerPrefs.HasKey("gold"))
+            if (!BetterPrefs.HasKey("gold"))
             {
-                PlayerPrefs.SetInt("gold", debugAddGold);
+                BetterPrefs.SetInt("gold", debugAddGold);
             }
             else
             {
-                gold = PlayerPrefs.GetInt("gold") + debugAddGold;
+                gold = BetterPrefs.GetInt("gold") + debugAddGold;
             }
         } // What do you mean by that?
         else
         {
-            if (!PlayerPrefs.HasKey("egold"))
+            if (!BetterPrefs.HasKey("egold"))
             {
-                PlayerPrefs.SetInt("egold", debugAddGold);
+                BetterPrefs.SetInt("egold", debugAddGold);
             }
             else
             {
-                gold = PlayerPrefs.GetInt("egold") + debugAddGold;
+                gold = BetterPrefs.GetInt("egold") + debugAddGold;
             }
         }// Well, I don't really know. I guess not.
 
@@ -293,15 +305,15 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
             gold++;
             if (endless)
             {
-                PlayerPrefs.SetInt("egold", gold);
+                BetterPrefs.SetInt("egold", gold);
             }
             else
             {
-                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
-                PlayerPrefs.SetInt("gold", gold);
+                BetterPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                BetterPrefs.SetInt("gold", gold);
             }
             Destroy(target.gameObject);
-            PlayerPrefs.Save();
+            BetterPrefs.Save();
         }
         if (target.gameObject.tag == "goldbig")
         {
@@ -311,15 +323,15 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
             gold += 10;
             if (endless)
             {
-                PlayerPrefs.SetInt("egold", gold);
+                BetterPrefs.SetInt("egold", gold);
             }
             else
             {
-                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
-                PlayerPrefs.SetInt("gold", gold);
+                BetterPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                BetterPrefs.SetInt("gold", gold);
             }
             Destroy(target.gameObject);
-            PlayerPrefs.Save();
+            BetterPrefs.Save();
         }
         if (target.gameObject.tag == "goldhuge")
         {
@@ -329,15 +341,15 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
             gold += 100;
             if (endless)
             {
-                PlayerPrefs.SetInt("egold", gold);
+                BetterPrefs.SetInt("egold", gold);
             }
             else
             {
-                PlayerPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
-                PlayerPrefs.SetInt("gold", gold);
+                BetterPrefs.SetInt(target.gameObject.GetComponent<UniqueId>().uniqueId, 1);
+                BetterPrefs.SetInt("gold", gold);
             }
             Destroy(target.gameObject);
-            PlayerPrefs.Save();
+            BetterPrefs.Save();
         }
     }
     public void Jump()
@@ -528,7 +540,7 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
     void Update()
     {
 
-        deadZone = PlayerPrefs.GetFloat("DeadZoneVolume") / 20;
+        deadZone = BetterPrefs.GetFloat("DeadZoneVolume") / 20;
 
         if (Input.GetButtonDown("Dialog"))
         {
@@ -647,13 +659,13 @@ public class NewBehaviourScript : MonoBehaviour // Pylon must strictly abide by 
         {
             // hp.alive = true;
             NextLevel.Static(true);
-            if (PlayerPrefs.HasKey("deaths"))
+            if (BetterPrefs.HasKey("deaths"))
             {
-                PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths") + 1);
+                BetterPrefs.SetInt("deaths", BetterPrefs.GetInt("deaths") + 1);
             }
             else
             {
-                PlayerPrefs.SetInt("deaths", 1);
+                BetterPrefs.SetInt("deaths", 1);
             }
             hp.alive = false;
             hp.health = 0;

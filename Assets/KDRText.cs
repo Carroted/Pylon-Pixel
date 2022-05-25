@@ -13,9 +13,9 @@ public class KDRText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("deaths"))
+        if (BetterPrefs.HasKey("deaths"))
         {
-            deaths = PlayerPrefs.GetInt("deaths");
+            deaths = BetterPrefs.GetInt("deaths");
         }
         else
         {
@@ -25,9 +25,9 @@ public class KDRText : MonoBehaviour
 
         foreach (string key in killKeyNames)
         {
-            if (PlayerPrefs.HasKey(key))
+            if (BetterPrefs.HasKey(key))
             {
-                kills += PlayerPrefs.GetInt(key);
+                kills += BetterPrefs.GetInt(key);
             }
         }
         kdr = (float)kills / (float)deaths;

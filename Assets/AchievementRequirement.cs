@@ -12,9 +12,9 @@ public class AchievementRequirement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (PlayerPrefs.HasKey(achievementKey))
+        if (BetterPrefs.HasKey(achievementKey))
         {
-            if (PlayerPrefs.GetInt(achievementKey) >= count)
+            if (BetterPrefs.GetInt(achievementKey) >= count)
             {
                 lockGroup.SetActive(false);
                 unlocked = true;

@@ -12,19 +12,19 @@ public class VolumeSetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey(key + "Volume"))
+        if (BetterPrefs.HasKey(key + "Volume"))
         {
-            slider.value = PlayerPrefs.GetFloat(key + "Volume");
+            slider.value = BetterPrefs.GetFloat(key + "Volume");
         }
         else
         {
-            PlayerPrefs.SetFloat(key + "Volume", middle);
+            BetterPrefs.SetFloat(key + "Volume", middle);
         }
 
     }
     public void OnValueChanged()
     {
-        PlayerPrefs.SetFloat(key + "Volume", slider.value);
+        BetterPrefs.SetFloat(key + "Volume", slider.value);
     }
     // Update is called once per frame
     void Update()
